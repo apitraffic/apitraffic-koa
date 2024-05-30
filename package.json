@@ -1,12 +1,12 @@
 {
   "name": "@apitraffic/koa",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "pub-patch": "npm version patch --force && git push origin master &&  npm publish",
-    "pub-minor": "npm version minor --force && git push origin master &&  npm publish",
-    "pub-major": "npm version major --force && git push origin master &&  npm publish"
+    "pub-patch": "npm version patch --force && git push origin master &&  npm publish --access public",
+    "pub-minor": "npm version minor --force && git push origin master &&  npm publish --access public",
+    "pub-major": "npm version major --force && git push origin master &&  npm publish --access public"
   },
   "dependencies": {
     "@apitraffic/utilities": "^0.0.13",
