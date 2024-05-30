@@ -5,3 +5,4 @@ logs/
 coverage/
 package-lock.js
 examples/package-lock.js
+examples/node_modules/
