@@ -1,0 +1,27 @@
+{
+  "name": "@apitraffic/koa",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "pub-patch": "npm version patch --force && git push origin master &&  npm publish",
+    "pub-minor": "npm version minor --force && git push origin master &&  npm publish",
+    "pub-major": "npm version major --force && git push origin master &&  npm publish"
+  },
+  "dependencies": {
+    "@apitraffic/utilities": "^0.0.13",
+    "zlib": "^1.0.5"
+  },
+  "devDependencies": {
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/apitraffic/apitraffic-koa.git"
+  },
+  "author": "ApiTraffic.io <sdk@apitraffic.io>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/apitraffic/apitraffic-koa/issues"
+  },
+  "homepage": "https://github.com/apitraffic/apitraffic-koa#readme"
+}
