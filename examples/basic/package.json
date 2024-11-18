@@ -1,16 +1,16 @@
 {
-    "name": "ApiTraffic-Koa-Example",
+    "name": "apitraffic-koa-example",
     "version": "0.0.1",
     "description": "",
     "main": "index.js",
     "dependencies": {
-      "@apitraffic/koa": "file:..",
+      "@apitraffic/koa": "file:../../",
       "@koa/router": "^12.0.1",
       "axios": "^1.6.8",
       "koa": "^2.15.3"
     },
     "scripts": {
-        "start": "node basic.js"
+        "start": "node index.js"
     },
     "author": "ApiTraffic.io <sdk@apitraffic.io>",
     "license": "MIT"

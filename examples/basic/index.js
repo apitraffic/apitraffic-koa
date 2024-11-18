@@ -12,22 +12,31 @@ const apiTraffic = require('@apitraffic/koa');
 const axios = require('axios');
 
 // Use the ApiTraffic Middleware...
-app.use(apiTraffic());
+app.use(apiTraffic.middleware());
 
 // use the KOA Router middleware...
 app.use(router.routes());
 
 router
   .get('/', (ctx, next) => {
-    ctx.body = 'Hello World!';
+    ctx.body = {message: 'Hello World!'};
   })
-  .get('/outbound', async (ctx, next) => {
+  .get('/authors', async (ctx, next) => {
     try{
+        // add some tracing information to the request. You can add as many traces as required, think of it like console log.
+        apiTraffic.trace("This is a sample trace from the sample ApiTraffic app.");
+
         // Await the response of the fetch call
-        const response = await axios.get('https://official-joke-api.appspot.com/random_joke')
+        const response = await axios.get('https://thetestrequest.com/authors');
+        
+        // tag the request. You can add as many tags to a request as required.
+        apiTraffic.tag("Account Id", "12345");
+
+        // added a bit more tracing to show what can be done.
+        apiTraffic.trace(`${response.data.length} authors were found.`);
         
         // once the call is complete, build the response...
-        ctx.body = 'Hello World w/ outbound request!';
+        ctx.body = response.data;
 
     } catch (error) {
         // Handle any errors that occur during the fetch

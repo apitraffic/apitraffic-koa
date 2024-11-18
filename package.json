@@ -1,7 +1,7 @@
 {
   "name": "@apitraffic/koa",
-  "version": "0.0.7",
-  "description": "",
+  "version": "1.0.0",
+  "description": "KOA plugin for sending request data to ApiTraffic.",
   "main": "index.js",
   "scripts": {
     "pub-patch": "npm version patch --force && git push origin master &&  npm publish --access public",
@@ -9,8 +9,7 @@
     "pub-major": "npm version major --force && git push origin master &&  npm publish --access public"
   },
   "dependencies": {
-    "@apitraffic/utilities": "^0.0.13",
-    "zlib": "^1.0.5"
+    "@apitraffic/utilities": "^1.0.13"
   },
   "devDependencies": {},
   "repository": {
