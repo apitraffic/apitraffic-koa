@@ -1,9 +1,15 @@
 {
   "name": "@apitraffic/koa",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "KOA plugin for sending request data to ApiTraffic.",
   "main": "index.js",
-  "keywords": ["koa","koajs", "workflows", "integrations", "logging"],
+  "keywords": [
+    "koa",
+    "koajs",
+    "workflows",
+    "integrations",
+    "logging"
+  ],
   "scripts": {
     "pub-patch": "npm version patch --force && git push origin master &&  npm publish --access public",
     "pub-minor": "npm version minor --force && git push origin master &&  npm publish --access public",
